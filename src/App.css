@@ -1,3 +1,9 @@
+.produce {
+  margin: 100%;
+  border: #61dafb 10px;
+  background-color: #61dafb;
+  display: flex;
+}
 .App {
   text-align: center;
 }

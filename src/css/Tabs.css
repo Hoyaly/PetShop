@@ -1,0 +1,16 @@
+.navtab{
+    
+    display: flex;
+    font-weight: 500;
+    /* background-color: #f5f5f5f5; */
+    justify-content: space-around;
+    /* color: black; */
+    --bs-nav-link-color: var(--bs-highlight-color)  !important;
+    --bs-nav-link-hover-color: var(--bs-highlight-color);
+    /* :root, [--bs-black= #000] */
+    ul {
+        display: flex;
+        column-gap: 200px;
+        /* justify-content: left; */
+    }
+}

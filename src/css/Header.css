@@ -1,0 +1,13 @@
+.header {
+    display: flex;
+    /* justify-content: left; */
+    /* text-align: center; */
+    background-color: #f5f5f5f5;
+    /* align-items:first baseline; */
+    justify-content: space-around;
+    ul {
+        display: flex;
+        column-gap: 200px;
+        /* justify-content: left; */
+    }
+}

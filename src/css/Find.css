@@ -1,0 +1,18 @@
+.control{
+    width: 100%;
+    display: flex;
+    /* background-color: aquamarine; */
+    justify-content: space-around;
+    /* margin-right: 100px; */
+}
+.huhu{
+    width: 40%;
+    display: flex;
+    height: 10%;
+    margin-top: 2%;
+}
+.dangnhap{
+    width: 10%;
+    height: 6%;
+    margin-top: 2%;
+}
