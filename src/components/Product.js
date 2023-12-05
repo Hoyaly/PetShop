@@ -1,23 +1,31 @@
-// // Product.js
-// import React from 'react';
-// import '../css/product.css'
 
-// const Product = ({ id, name, price, imageUrl }) => (
-//   <div className='product-list'>
-//     <div className='product'>
-//         <img src={imageUrl} alt={name} style={{ width: '100px', height: '100px' }} />
-//         <p>{name}</p>
-//         <button>Giá: {price}</button>
-//         <button>Thêm vào giỏ hàng</button>
-//     </div>
-//   </div>
-// );
+import React from 'react';
+import { Card } from 'react-bootstrap';
+import Button from 'react-bootstrap';
+import '../css/product.css'
 
-// export default Product;
+const Product = ({ products }) => {
+    return (
+            <div className='product-list'>
+                {products.map((product) => (
+                    <Card style={{ width: '18rem' }}>
+                        <Card.Img variant="top" src={product.imageUrl} />
+                        <Card.Body>
+                            <Card.Title>{product.name}</Card.Title>
+                            <Card.Text>
+                                {product.price}
+                            </Card.Text>
+                            <button variant="primary">Mua</button>
+                        </Card.Body>
+                    </Card>
 
-//----------------------------------------------//
+                ))}
+            </div>
 
+    );
+};
 
+export default Product;
 
 
 

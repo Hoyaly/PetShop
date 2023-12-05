@@ -4,6 +4,8 @@ import Tabss from "./Tabss"
 import { MdOutlinePets } from "react-icons/md";
 import '../css/Cards.css'
 import React, { useState } from 'react';
+import ProductList from "./ProductList";
+import Product from "./Product";
 
 
 const Cart = () => {
@@ -14,6 +16,8 @@ const Cart = () => {
             <Tabss />
             <h1 className="danhsach">Giỏ hàng</h1>
             <h1 className="danhsach">-----<MdOutlinePets />-----</h1>
+            {/* <p><ProductList products={products} /></p> */}
+
         </>
     )
 }

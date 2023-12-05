@@ -1,38 +1,72 @@
-// // Login.js
-// import React, { useState } from 'react';
-// import { useHistory } from 'react-router-dom';
+import React, { useState } from 'react';
 
-// const Login = () => {
-//   const [username, setUsername] = useState('');
-//   const [password, setPassword] = useState('');
-//   const [isLoggedIn, setLoggedIn] = useState(false);
+const LoginForm = () => {
+    const [username, setUsername] = useState('');
+    const [password, setPassword] = useState('');
+    const [error, setError] = useState('');
 
-//   const history = useHistory();
+    const handleUsernameChange = (event) => {
+        setUsername(event.target.value);
+    };
 
-//   const handleLogin = () => {
-//     // Kiểm tra đăng nhập - Đây là nơi bạn sẽ thực hiện kiểm tra đăng nhập thực tế, có thể sử dụng API, Firebase, hoặc bất kỳ phương thức nào khác.
-//     if (username === 'user' && password === 'password') {
-//       setLoggedIn(true);
-//       history.push('/dashboard'); // Chuyển hướng sau khi đăng nhập thành công
-//     } else {
-//       alert('Đăng nhập không thành công. Vui lòng kiểm tra lại tên đăng nhập và mật khẩu.');
-//     }
-//   };
+    const handlePasswordChange = (event) => {
+        setPassword(event.target.value);
+    };
 
-//   return (
-//     <div>
-//       <h2>Đăng nhập</h2>
-//       <label>
-//         Tên đăng nhập:
-//         <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
-//       </label>
-//       <label>
-//         Mật khẩu:
-//         <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
-//       </label>
-//       <button onClick={handleLogin}>Đăng nhập</button>
-//     </div>
-//   );
-// };
+    const handleSubmit = async (event) => {
+        event.preventDefault();
 
-// export default Login;
+        // Assume you have an API endpoint for login
+        const loginEndpoint = 'your-login-api-endpoint';
+
+        try {
+            const response = await fetch(loginEndpoint, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ username, password }),
+            });
+
+            if (response.ok) {
+                // Login successful
+                console.log('Login successful');
+                // You might want to redirect the user or perform other actions here
+            } else {
+                // Login failed
+                const data = await response.json();
+                setError(data.message || 'Login failed');
+            }
+        } catch (error) {
+            console.error('Error during login:', error);
+            setError('An unexpected error occurred');
+        }
+    };
+
+    return (
+        <form onSubmit={handleSubmit}>
+            <div>
+                <label htmlFor="username">Username:</label>
+                <input
+                    type="text"
+                    id="username"
+                    value={username}
+                    onChange={handleUsernameChange}
+                />
+            </div>
+            <div>
+                <label htmlFor="password">Password:</label>
+                <input
+                    type="password"
+                    id="password"
+                    value={password}
+                    onChange={handlePasswordChange}
+                />
+            </div>
+            <button type="submit">Login</button>
+            {error && <p>{error}</p>}
+        </form>
+    );
+};
+
+export default LoginForm;

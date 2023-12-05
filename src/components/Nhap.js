@@ -60,7 +60,7 @@ const ProductList = ({ products }) => {
            onChange={handleSearch}
          />
        </div>
-        <h2>Danh sách sản phẩm</h2>
+        {/* <h2>Danh sách sản phẩm</h2> */}
         {filteredProducts.map(product => (
           <div key={product.id} className="product">
           <img src={product.imageUrl} alt={product.name} style={{ width: '100px', height: '100px' }} />

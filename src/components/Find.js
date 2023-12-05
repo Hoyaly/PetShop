@@ -3,6 +3,7 @@ import { IoPersonSharp } from "react-icons/io5";
 import '../css/Find.css';
 import Button from 'react-bootstrap/Button';
 import React, { useState } from 'react';
+import LoginForm from './Login';
 
 const Find = () => {
     return (
@@ -21,6 +22,7 @@ const Find = () => {
                     <IoPersonSharp />Đăng nhập
                 </Button>
             </div>
+            {/* <LoginForm/> */}
         </div>
     )
 }

@@ -27,12 +27,10 @@ const Tabss = () => {
                 <Nav.Link eventKey="1" href="/lienhe">
                     Liên hệ và đánh giá
                 </Nav.Link>
-                <Nav.Link eventKey="1" href="/giohang">
+                {/* <Nav.Link eventKey="1" href="/giohang">
                     Giỏ hàng
-                </Nav.Link>
-                {/* <a href='/danhsach'>Danh sách</a>
-            <a href='/lienhe'>Liên hệ</a> */}
-                {/* </ul> */}
+                </Nav.Link> */}
+                
             </Nav>
         </>
 
