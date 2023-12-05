@@ -11,8 +11,10 @@ import { BrowserRouter as Router, Route, Redirect, Switch, Routes } from 'react-
 import Home from './components/Home';
 import Login from './components/Login';
 import Contact from './components/Contact';
+import Cart from './components/Cart'; 
 
-const Dashboard = () => <div>Trang Dashboard</div>;
+// const Dashboard = () => <div>Trang Dashboard</div>;
+
 const App = () => {
   return (
     <div className='app'>
@@ -20,7 +22,7 @@ const App = () => {
       <Route path='/' element={<Home/>}></Route>
       <Route path='/danhsach' element={<Cards/>}></Route>
       <Route path='/lienhe' element={<Contact/>}></Route>
-      {/* <Route path='/lienhe' element={<Contact/>}></Route> */}
+      <Route path='/giohang' element={<Cart/>}></Route>
     </Routes>
     </div>
     

@@ -1,0 +1,20 @@
+.contactd{
+    text-align: center;
+    color: brown;
+    font-weight: bold;
+}
+.row-contact{
+    display: flex;
+    justify-content: space-around;
+}
+.img-contact{
+    width: 250px;
+    height: 250px;
+}
+.form-contact{
+    /* width: 50%;
+    height: 30%; */
+    align-items: center;
+    /* display: flex; */
+    align-content: center;
+}

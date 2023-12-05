@@ -142,11 +142,6 @@ const ProductList = ({ products }) => {
     return (
             <div className='product-list'>
                 {products.map((product) => (
-                    //   <li key={product.id}>
-                    //     <img src={product.imageUrl} alt={product.name} style={{ width: '100px', height: '100px' }} />
-                    //     <p>Name: {product.name}</p>
-                    //     <p>Price: {product.price}</p>
-                    //   </li>
                     <Card style={{ width: '18rem' }}>
                         <Card.Img variant="top" src={product.imageUrl} />
                         <Card.Body>

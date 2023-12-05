@@ -25,10 +25,7 @@ const Tabss = () => {
                     Danh sách
                 </Nav.Link>
                 <Nav.Link eventKey="1" href="/lienhe">
-                    Liên hệ
-                </Nav.Link>
-                <Nav.Link eventKey="1" href="/kinhnghiem">
-                    Kinh nghiệm
+                    Liên hệ và đánh giá
                 </Nav.Link>
                 <Nav.Link eventKey="1" href="/giohang">
                     Giỏ hàng

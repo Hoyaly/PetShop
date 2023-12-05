@@ -1,8 +1,8 @@
 import Form from 'react-bootstrap/Form';
-// import InputGroup from 'react-bootstrap/InputGroup';
 import { IoPersonSharp } from "react-icons/io5";
 import '../css/Find.css';
 import Button from 'react-bootstrap/Button';
+import React, { useState } from 'react';
 
 const Find = () => {
     return (
