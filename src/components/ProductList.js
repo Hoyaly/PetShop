@@ -4,17 +4,17 @@ import Product from './Product';
 
 const ProductList = ({ products }) => {
 
-  const [searchTerm, setSearchTerm] = useState('');
+  // const [searchTerm, setSearchTerm] = useState('');
   const [filteredProducts, setFilteredProducts] = useState(products);
 
-  const handleSearch = (event) => {
-    const term = event.target.value;
-    setSearchTerm(term);
-    const filtered = products.filter(product =>
-      product.name.toLowerCase().includes(term.toLowerCase())
-    );
-    setFilteredProducts(filtered);
-  };
+  // const handleSearch = (event) => {
+  //   const term = event.target.value;
+  //   setSearchTerm(term);
+  //   const filtered = products.filter(product =>
+  //     product.name.toLowerCase().includes(term.toLowerCase())
+  //   );
+  //   setFilteredProducts(filtered);
+  // };
 
   const [cart, setCart] = useState({});
 
@@ -46,12 +46,12 @@ const ProductList = ({ products }) => {
         totalPrice += quantity * parseFloat(product.price.replace(' VNĐ', '').replace(',', ''));
       }
     });
-    return totalPrice.toFixed(2);
+    return totalPrice.toFixed(3);
   };
 
   return (
     <div>
-      <div>
+      {/* <div>
          <label htmlFor="search">Tìm kiếm: </label>
          <input
            type="text"
@@ -59,7 +59,7 @@ const ProductList = ({ products }) => {
            value={searchTerm}
            onChange={handleSearch}
          />
-       </div>
+       </div> */}
         <h2>Danh sách sản phẩm</h2>
         {filteredProducts.map(product => (
           <div key={product.id} className="product">

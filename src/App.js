@@ -12,6 +12,8 @@ import Home from './components/Home';
 import Login from './components/Login';
 import Contact from './components/Contact';
 import Cart from './components/Cart'; 
+// import Detail from './components/Detail';
+import Detail from './components/Detail';
 
 // const Dashboard = () => <div>Trang Dashboard</div>;
 
@@ -23,6 +25,8 @@ const App = () => {
       <Route path='/danhsach' element={<Cards/>}></Route>
       <Route path='/lienhe' element={<Contact/>}></Route>
       <Route path='/giohang' element={<Cart/>}></Route>
+      <Route path='/detail/:id' element={<Detail/>}></Route>
+      <Route path='/login' element={<Login/>}></Route>
     </Routes>
     </div>
     

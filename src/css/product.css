@@ -8,7 +8,7 @@
 }
 .product-list{
     display: grid;
-    grid-template-rows: 33% 33% 33%; /* Define two rows with heights 100px and 200px */
+    grid-template-rows: 50% 50%; /* Define two rows with heights 100px and 200px */
     grid-template-columns: 25% 25% 25% 25%; /* Define two columns with a 1:2 ratio */
     gap: 10px;
     justify-content: space-around;
