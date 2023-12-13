@@ -24,3 +24,7 @@
 .app{
     background-color: rgb(255, 255, 255);
 }
+.btn-cart{
+    border: black 1px;
+    margin-left: 50px;
+}

@@ -5,6 +5,7 @@ import Button from 'react-bootstrap';
 import '../css/product.css';
 import { useState } from 'react';
 import Cart from './Cart';
+import { MdOutlinePets } from "react-icons/md";
 
 const Product = ({ products }) => {
     const [filteredProducts, setFilteredProducts] = useState(products);
@@ -49,14 +50,16 @@ const Product = ({ products }) => {
                             {product.price}
                         </Card.Text>
                         {/* <a href={`/detail/${product.id}`}>Chi tiết</a> */}
-                        <button onClick={() => addToCart(product.id)}>Mua</button>
-                        <button onClick={() => reduceToCart(product.id)}>-</button>
+                        <button className='btn-cart' onClick={() => addToCart(product.id)}>Mua</button>
+                        <button className='btn-cart' onClick={() => reduceToCart(product.id)}>Giảm</button>
                     </Card.Body>
                 </Card>
 
             ))}
-            <p>Tổng số lượng: {getTotalItems()}</p>
-            <p>Tổng giá: {getTotalPrice()} VNĐ</p>
+            <h1 className="danhsach">Giỏ hàng</h1>
+            <h1 className="danhsach">-----<MdOutlinePets />-----</h1>
+            <div>Tổng số lượng: {getTotalItems()}</div>
+            <div>Tổng giá: {getTotalPrice()} VNĐ</div>
         </div>
 
     );

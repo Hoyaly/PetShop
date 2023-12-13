@@ -19,8 +19,6 @@ const Cards = () => {
             <h1 className="danhsach">Danh sách sản phẩm</h1>
             <h1 className="danhsach">-----<MdOutlinePets />-----</h1>
             <Row className="justify-content-around">
-                {/* <Product></Product> */}
-                {/* <p><ProductList products={products}/></p> */}
                 <Product products={products}></Product>
             </Row>
         </>
